@@ -1,0 +1,232 @@
+/* Our Media Query Manager which we are going to use in our project */
+/* Your variables used in the designing dashboard goes here */
+.add-btn {
+  border: none;
+  padding: 1.5rem 3rem;
+  font-family: inherit;
+  color: #fcfcfc;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #f0894d;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: all 0.3s; }
+  .add-btn:hover {
+    background-color: #f2955f; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%; }
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #fcfcfc; }
+
+/*********************************/
+/*********************************/
+/****************Scroll bar******/
+/*********************************/
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: transparent; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #111111;
+  border-radius: 1rem; }
+
+.updates {
+  background-color: #fcfcfc;
+  padding: 2rem;
+  outline: 1px solid lime; }
+  .updates-menu {
+    display: flex;
+    justify-content: flex-end; }
+  .updates-menu_icon {
+    color: #f0894d;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s; }
+    .updates-menu_icon:hover {
+      color: #f2955f; }
+  .updates-user {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem; }
+    .updates-user-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      position: relative; }
+      .updates-user-info::before {
+        content: "";
+        height: 0.7rem;
+        width: 0.7rem;
+        border-radius: 50%;
+        background-color: #f0894d;
+        border: 1px solid #fcfcfc;
+        position: absolute;
+        top: 1.5rem;
+        z-index: 2;
+        left: 1.5rem; }
+      .updates-user-info-bell {
+        font-size: 2.7rem;
+        cursor: pointer;
+        transition: all 0.3s; }
+        .updates-user-info-bell:hover {
+          color: #f2955f; }
+      .updates-user-info-dp {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .updates-user-info-dp img {
+          display: block;
+          height: 3.6rem;
+          width: 3.6rem;
+          border-radius: 50%;
+          object-fit: contain;
+          margin-right: 01rem;
+          cursor: pointer; }
+        .updates-user-info-dp div span {
+          font-size: 1rem;
+          color: #9d9d9d;
+          font-weight: 700; }
+        .updates-user-info-dp div p {
+          font-size: 1.4rem;
+          color: #111111;
+          font-weight: 700; }
+      .updates-user-info-chev {
+        height: 1.8rem;
+        width: 1.8rem;
+        background-color: #f6f2ec;
+        display: grid;
+        place-items: center;
+        border: 0.5px solid #fcbea4;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s; }
+        .updates-user-info-chev:hover {
+          background-color: #fcfcfc; }
+        .updates-user-info-chev ion-icon {
+          color: #f0894d;
+          font-size: 1.2rem; }
+  .updates-team {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem; }
+    .updates-teamMembers {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem; }
+      .updates-teamMembers-img {
+        height: 5.5rem;
+        width: 5.5rem;
+        object-fit: cover;
+        border-radius: 50%; }
+      .updates-teamMembers-jr {
+        height: 5rem;
+        width: 5rem;
+        background-color: #f6f2ec;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #f0894d;
+        font-size: 1.6rem;
+        font-weight: 700;
+        cursor: pointer; }
+      .updates-teamMembers-addmore {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px dotted #f0894d;
+        font-size: 2.8rem;
+        color: #f0894d;
+        background-color: #f6f2ec;
+        cursor: pointer;
+        transition: all 0.3s; }
+        .updates-teamMembers-addmore:hover {
+          background-color: #fcfcfc; }
+  .updates-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #fcfcfc;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(17, 17, 17, 0.1);
+    margin-bottom: 2.5rem; }
+    .updates-data-1 span {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #9d9d9d; }
+    .updates-data-1 p {
+      font-size: 1.6rem;
+      font-weight: 700; }
+  .updates-daily-tasks-txt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: 1px solid lime; }
+    .updates-daily-tasks-txt p {
+      font-size: 1.8rem;
+      font-weight: 700; }
+  .updates-edit:visited, .updates-edit:link {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #f0894d;
+    font-weight: 700;
+    transition: all 0.3s; }
+  .updates-edit:hover, .updates-edit:active {
+    color: #f2955f; }
+  .updates-task-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto; }
+    .updates-task-box-1 {
+      background-color: lightblue; }
+    .updates-task-box-2 {
+      background-color: coral; }
+    .updates-task-box-3 {
+      background-color: aqua; }
+    .updates-task-box-4 {
+      background-color: lime; }
+
+.parent-grid {
+  display: grid;
+  grid-template-columns: 6% 18% repeat(2, 1fr) 30%;
+  grid-template-rows: repeat(5, 1fr);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; }
+
+.nav {
+  grid-row: 1 / 6;
+  grid-column: 1 / 2;
+  background-color: lightblue; }
+
+.sidebar {
+  grid-row: 1 / 6;
+  grid-column: 2 / 3; }
+
+.tasks {
+  grid-row: 1 / -1;
+  grid-column: 3 / 5; }
+
+.updates {
+  grid-row: 1 / -1;
+  grid-column: 5 / 7; }

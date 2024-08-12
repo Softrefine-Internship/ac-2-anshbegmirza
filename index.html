@@ -1,9 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ziferblat</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="parent-grid">
+  <nav class="nav">
+    Nav on left with icons
+  </nav>
+
+  <div class="sidebar">
+    Sidebar beside Nav having multiple lists
+  </div>
+  <!-- ************* -->
+  <!-- Main Task Section -->
+  <!-- ************* -->
+
+  <main class="tasks">
+    <p>Today 4, October</p>
+  </main>
+
+  <!-- ************* -->
+  <!-- Updates Section -->
+  <!-- ************** -->
+
+  <div class="updates">
+    <div class="updates-menu">
+      <ion-icon name="ellipsis-horizontal" class="updates-menu_icon"></ion-icon>
+    </div>
+
+    <div class="updates-user">
+
+      <button class="add-btn">
+        Add project
+      </button>
+
+      <div class="updates-user-info">
+        <ion-icon class="updates-user-info-bell" name="notifications-outline"></ion-icon>
+        <div class="updates-user-info-dp">
+          <img src="imgs/maria.jpg" alt="Profile Picture">
+          <div>
+            <span>User</span>
+            <p>Maria</p>
+          </div>
+
+
+        </div>
+        <div class="updates-user-info-chev"><ion-icon name="chevron-down-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+    <p class="updates-team">Team members</p>
+    <div class="updates-teamMembers">
+      <img src="imgs/team-member_1.jpg" alt="Team Member 1" class="updates-teamMembers-img">
+      <img src="imgs/team-member_2.jpg" alt="Team Member 1" class="updates-teamMembers-img">
+      <div class="updates-teamMembers-jr">JR</div>
+      <img src="imgs/team-member_3.jpg" alt="Team Member 1" class="updates-teamMembers-img">
+      <img src="imgs/team-member_4.jpg" alt="Team Member 1" class="updates-teamMembers-img">
+
+      <div class="updates-teamMembers-addmore">+</div>
+
+    </div>
+
+
+    <div class="updates-data">
+      <div class="updates-data-1">
+        <span>Project time</span>
+        <p>18 hours</p>
+      </div>
+
+
+      <div class="updates-data-1">
+        <span>Tasks in progress</span>
+        <p>2</p>
+      </div>
+
+      <div class="updates-data-1">
+        <span>Finished tasks</span>
+        <p>16</p>
+      </div>
+
+    </div>
+
+    <div class="updates-daily-tasks-txt">
+      <p>Daily Tasks (3)</p>
+      <a href="#" class="updates-edit"> Edit</a>
+    </div>
+    <div class="updates-task-box">
+      <div class="updates-task-box-1">
+        Add new
+      </div>
+      <div class="updates-task-box-2">
+        Change color palette to more bright
+      </div>
+      <div class="updates-task-box-3">
+        Make prototype for mobile version
+      </div>
+      <div class="updates-task-box-4">
+        Make fixes in homepage
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Ion icons link -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>

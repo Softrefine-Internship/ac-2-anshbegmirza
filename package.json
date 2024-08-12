@@ -1,0 +1,22 @@
+{
+  "name": "ac-2-anshbegmirza",
+  "version": "1.0.0",
+  "description": "### Project Description",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Softrefine-Internship/ac-2-anshbegmirza.git"
+  },
+  "author": "anshbegmirza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Softrefine-Internship/ac-2-anshbegmirza/issues"
+  },
+  "homepage": "https://github.com/Softrefine-Internship/ac-2-anshbegmirza#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
