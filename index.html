@@ -1,3 +1,4 @@
+.
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,9 +30,68 @@
   <!-- ************* -->
 
   <main class="tasks">
-    <p>Today 4, October</p>
-  </main>
+    <h1>Today 4, October</h1>
 
+    <div class="tasks_search-cont margin-btm-large">
+      <form action="#">
+        <ion-icon name="search-outline"></ion-icon>
+        <input type="text" placeholder="Searching for...">
+      </form>
+    </div>
+
+    <div class="updates-daily-tasks-txt">
+      <p>Recent Projects</p>
+      <a href="#" class="updates-edit">View all</a>
+    </div>
+
+    <div class="tasks_project-cards margin-top-sm">
+      <!-- Card 1 -->
+      <div class="tasks_project-cards-general tasks_project-cards-1">
+        <div class="tasks-img-box margin-btm-large">
+          <div class="tasks-img-box-imgs">
+            <div>+3</div>
+            <img src="imgs/team-member_1.jpg" alt="Card image" class="tasks-img-box-imgs-1">
+            <img src="imgs/team-member_2.jpg" alt="Card image" class="tasks-img-box-imgs-1">
+          </div>
+        </div>
+        <h1>Design system</h1>
+        <p>Deadline, 18 October</p>
+
+        <div class="progress-container">
+          <span class="progress-info">84 hours / 40%</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 40%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="tasks_project-cards-general tasks_project-cards-2">
+        <h1>Development</h1>
+        <p>Deadline, 22 October</p>
+        <div class="progress-container">
+          <span class="progress-info">50 hours / 60%</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 60%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="margin-top-med margin-btm-sm">Reminders</h2>
+    <div class="tasks_reminder-box">
+      <span>Tomorrow, 16-18:00</span>
+      <div class="tasks_reminder-box-txt">
+        <p>Discussion of the intern results of the project</p>
+        <button class="btn-setReminder">
+          Set reminder
+        </button>
+      </div>
+      <div class="tasks_reminder-box-swipe">
+        &nbsp;
+      </div>
+    </div>
+  </main>
   <!-- ************* -->
   <!-- Updates Section -->
   <!-- ************** -->
@@ -41,7 +101,7 @@
       <ion-icon name="ellipsis-horizontal" class="updates-menu_icon"></ion-icon>
     </div>
 
-    <div class="updates-user">
+    <div class="updates-user margin-btm-large">
 
       <button class="add-btn">
         Add project
@@ -64,7 +124,7 @@
     </div>
 
     <p class="updates-team">Team members</p>
-    <div class="updates-teamMembers">
+    <div class="updates-teamMembers margin-btm-med">
       <img src="imgs/team-member_1.jpg" alt="Team Member 1" class="updates-teamMembers-img">
       <img src="imgs/team-member_2.jpg" alt="Team Member 1" class="updates-teamMembers-img">
       <div class="updates-teamMembers-jr">JR</div>

@@ -1,8 +1,32 @@
 /* Our Media Query Manager which we are going to use in our project */
 /* Your variables used in the designing dashboard goes here */
+.margin-btm-sm {
+  margin-bottom: 1rem; }
+
+.margin-btm-med {
+  margin-bottom: 3rem; }
+
+.margin-btm-big {
+  margin-bottom: 2rem; }
+
+.margin-btm-large {
+  margin-bottom: 4rem; }
+
+.margin-top-sm {
+  margin-top: 1rem; }
+
+.margin-top-med {
+  margin-top: 2rem; }
+
+.margin-top-big {
+  margin-top: 3rem; }
+
+.margin-top-large {
+  margin-top: 4rem; }
+
 .add-btn {
   border: none;
-  padding: 1.5rem 3rem;
+  padding: 1rem 3rem;
   font-family: inherit;
   color: #fcfcfc;
   font-size: 1.4rem;
@@ -13,6 +37,18 @@
   transition: all 0.3s; }
   .add-btn:hover {
     background-color: #f2955f; }
+
+.btn-setReminder {
+  font-family: inherit;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  border: 1px dotted #f0894d;
+  background-color: #fcfcfc;
+  cursor: pointer;
+  transition: all 0.3s; }
+  .btn-setReminder:hover {
+    background-color: #f2ece2; }
 
 *,
 *::after,
@@ -45,13 +81,142 @@ body {
   background-color: #111111;
   border-radius: 1rem; }
 
+.tasks {
+  outline: 1px solid lime;
+  padding: 2rem; }
+  .tasks h1 {
+    margin-bottom: 1.3rem; }
+  .tasks_search-cont {
+    padding: 1rem;
+    border: 1px solid rgba(157, 157, 157, 0.5);
+    border-radius: 2rem; }
+    .tasks_search-cont form {
+      display: flex;
+      align-items: center;
+      font-family: inherit;
+      color: rgba(157, 157, 157, 0.7); }
+      .tasks_search-cont form ion-icon {
+        font-size: 1.4rem;
+        margin-right: 5px;
+        cursor: pointer;
+        transition: all 0.3s; }
+        .tasks_search-cont form ion-icon:hover {
+          color: #9d9d9d; }
+      .tasks_search-cont form input[type="text"] {
+        border: none;
+        width: 100%;
+        padding-right: 0.5rem; }
+        .tasks_search-cont form input[type="text"]::placeholder {
+          color: rgba(157, 157, 157, 0.7); }
+  .tasks_project-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    outline: 1px solid transparent;
+    min-height: 300px; }
+    .tasks_project-cards-general {
+      padding: 2rem;
+      border-radius: 2rem;
+      background-color: #fcfcfc;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+    .tasks_project-cards-1 {
+      background-color: #fcbea4; }
+    .tasks_project-cards-2 {
+      background-color: #fce6bd; }
+  .tasks-img-box-imgs {
+    display: flex;
+    align-items: center; }
+    .tasks-img-box-imgs div {
+      height: 4rem;
+      width: 4rem;
+      background-color: #111111;
+      color: #fcfcfc;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      display: grid;
+      place-items: center;
+      z-index: 5;
+      border: 2px solid #fcbea4;
+      transition: all 0.3s;
+      cursor: pointer; }
+    .tasks-img-box-imgs img {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-left: -1.5rem;
+      border: 2px solid #fcbea4; }
+    .tasks-img-box-imgs-1 {
+      z-index: 4; }
+  .tasks p {
+    margin-bottom: auto; }
+  .tasks_reminder-box {
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(17, 17, 17, 0.2); }
+    .tasks_reminder-box span {
+      color: rgba(17, 17, 17, 0.9); }
+    .tasks_reminder-box-txt {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .tasks_reminder-box-txt p {
+        font-size: 1.6rem;
+        font-weight: 700; }
+    .tasks_reminder-box-swipe {
+      height: 0.5rem;
+      width: 0.5rem;
+      background-color: #f0894d;
+      border-radius: 50%;
+      position: relative;
+      margin: 0 auto;
+      cursor: pointer; }
+      .tasks_reminder-box-swipe::after, .tasks_reminder-box-swipe::before {
+        content: "";
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        position: absolute; }
+      .tasks_reminder-box-swipe::after {
+        background-color: rgba(240, 137, 77, 0.75);
+        top: 0;
+        left: 1rem; }
+      .tasks_reminder-box-swipe::before {
+        background-color: rgba(240, 137, 77, 0.5);
+        left: 2rem; }
+
+.progress {
+  height: 100%;
+  background-color: #111111;
+  border-radius: 25px 0 0 25px;
+  transition: width 0.4s ease-in-out; }
+  .progress-container {
+    margin-top: auto; }
+  .progress-info {
+    display: block;
+    color: #111111;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 0.7rem; }
+  .progress-bar {
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.2);
+    border-radius: 25px;
+    overflow: hidden;
+    height: 0.7rem; }
+
 .updates {
   background-color: #fcfcfc;
   padding: 2rem;
   outline: 1px solid lime; }
   .updates-menu {
     display: flex;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    margin-bottom: 1rem; }
   .updates-menu_icon {
     color: #f0894d;
     font-size: 3rem;
@@ -62,7 +227,7 @@ body {
   .updates-user {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem; }
+    border-radius: 2rem; }
     .updates-user-info {
       display: flex;
       align-items: center;
@@ -77,7 +242,7 @@ body {
         background-color: #f0894d;
         border: 1px solid #fcfcfc;
         position: absolute;
-        top: 1.5rem;
+        top: 1.2rem;
         z-index: 2;
         left: 1.5rem; }
       .updates-user-info-bell {
@@ -128,8 +293,7 @@ body {
     .updates-teamMembers {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin-bottom: 2rem; }
+      justify-content: space-between; }
       .updates-teamMembers-img {
         height: 5.5rem;
         width: 5.5rem;
@@ -180,8 +344,7 @@ body {
   .updates-daily-tasks-txt {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    outline: 1px solid lime; }
+    justify-content: space-between; }
     .updates-daily-tasks-txt p {
       font-size: 1.8rem;
       font-weight: 700; }

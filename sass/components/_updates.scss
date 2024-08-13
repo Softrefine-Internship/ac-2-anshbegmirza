@@ -2,9 +2,11 @@
   background-color: $color-white;
   padding: 2rem;
   outline: 1px solid lime;
+
   &-menu {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 1rem;
   }
 
   &-menu_icon {
@@ -12,16 +14,20 @@
     font-size: 3rem;
     cursor: pointer;
     transition: all 0.3s;
+
     &:hover {
       color: $color-orange-hover;
     }
   }
 
+  //User image and button on left
+
   &-user {
     display: flex;
     justify-content: space-between;
     // outline: 1px solid lime;
-    margin-bottom: 2rem;
+    border-radius: 2rem;
+
     &-info {
       display: flex;
       align-items: center;
@@ -36,7 +42,7 @@
         background-color: $color-orange;
         border: 1px solid $color-white;
         position: absolute;
-        top: 1.5rem;
+        top: 1.2rem;
         z-index: 2;
         left: 1.5rem;
       }
@@ -101,6 +107,7 @@
     }
   }
 
+  //Team below user
   &-team {
     font-size: 1.8rem;
     font-weight: 700;
@@ -109,7 +116,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 2rem;
+      // margin-bottom: 2rem;
+      // outline: $outline;
       &-img {
         height: 5.5rem;
         width: 5.5rem;
@@ -178,7 +186,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    outline: 1px solid lime;
+    // outline: 1px solid lime;
+
     p {
       font-size: 1.8rem;
       font-weight: 700;

@@ -1,0 +1,185 @@
+.tasks {
+  outline: 1px solid lime;
+  padding: 2rem;
+
+  h1 {
+    margin-bottom: 1.3rem;
+  }
+
+  &_search-cont {
+    padding: 1rem;
+    border: 1px solid rgba($color-gray, 0.5);
+    border-radius: 2rem;
+
+    form {
+      display: flex;
+      align-items: center;
+      font-family: inherit;
+      color: rgba($color-gray, 0.7);
+
+      ion-icon {
+        font-size: 1.4rem;
+        margin-right: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          color: rgba($color-gray, 1);
+        }
+      }
+
+      input[type="text"] {
+        border: none;
+        width: 100%;
+        padding-right: 0.5rem;
+
+        &::placeholder {
+          color: rgba($color-gray, 0.7);
+        }
+      }
+    }
+  }
+
+  &_project-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    outline: 1px solid transparent;
+    min-height: 300px;
+
+    &-general {
+      padding: 2rem;
+      border-radius: 2rem;
+      background-color: $color-white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; // Ensures that the progress bar stays at the bottom
+      height: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &-1 {
+      background-color: $color-orange-light;
+    }
+
+    &-2 {
+      background-color: $color-yellow-light;
+    }
+  }
+
+  &-img-box {
+    &-imgs {
+      display: flex;
+      align-items: center;
+
+      div {
+        height: 4rem;
+        width: 4rem;
+        background-color: $color-black;
+        color: $color-white;
+        border-radius: 50%;
+        font-size: 1.4rem;
+        display: grid;
+        place-items: center;
+        z-index: 5;
+        border: 2px solid $color-orange-light;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+
+      img {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: -1.5rem;
+        border: 2px solid $color-orange-light;
+      }
+
+      &-1 {
+        z-index: 4;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: auto;
+  }
+
+  &_reminder-box {
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid rgba($color-black, 0.2);
+
+    span {
+      color: rgba($color-black, 0.9);
+    }
+
+    &-txt {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+    }
+
+    &-swipe {
+      height: 0.5rem;
+      width: 0.5rem;
+      background-color: $color-orange;
+      border-radius: 50%;
+      position: relative;
+      margin: 0 auto;
+      cursor: pointer;
+      &::after,
+      &::before {
+        content: "";
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        position: absolute;
+      }
+
+      &::after {
+        background-color: rgba($color-orange, 0.75);
+        top: 0;
+        left: 1rem;
+      }
+
+      &::before {
+        background-color: rgba($color-orange, 0.5);
+        left: 2rem;
+      }
+    }
+  }
+}
+
+.progress {
+  height: 100%;
+  background-color: $color-black;
+  border-radius: 25px 0 0 25px;
+  transition: width 0.4s ease-in-out;
+
+  &-container {
+    margin-top: auto;
+  }
+
+  &-info {
+    display: block;
+    color: $color-black;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 0.7rem;
+  }
+
+  &-bar {
+    width: 100%;
+    background-color: rgba($color-black, 0.2);
+    border-radius: 25px;
+    overflow: hidden;
+    height: 0.7rem;
+  }
+}
