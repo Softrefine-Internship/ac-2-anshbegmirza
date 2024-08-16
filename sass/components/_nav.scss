@@ -1,0 +1,71 @@
+.nav {
+  // outline: $outline;
+  padding: 1rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &-logo-box {
+    border-bottom: 1px solid rgba($color-gray, 0.36);
+  }
+  &-logo {
+    height: 5rem;
+    width: 5rem;
+    // padding-bottom: 1rem;
+    margin: 0 1rem;
+  }
+
+  &-options {
+    list-style: none;
+    // background-color: pink;
+    width: 100%;
+    padding: 0;
+
+    &-item {
+      // margin-bottom: 1rem;
+      // background-color: $color-off-white;
+      padding: 1.2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        background-color: $color-off-white;
+      }
+      a {
+        text-decoration: none;
+
+        svg {
+          height: 2.5rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &-help {
+    height: 3rem;
+    width: 3rem;
+    background-color: $color-black;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: $color-white;
+
+    ion-icon {
+      font-size: 1.6rem;
+    }
+
+    &:hover {
+      background-color: rgba($color-black, 0.4);
+      color: $color-black;
+    }
+  }
+}
+
+#selected {
+  background-color: $color-off-white;
+}

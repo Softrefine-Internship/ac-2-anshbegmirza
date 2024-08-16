@@ -1,7 +1,9 @@
 .updates {
   background-color: $color-white;
   padding: 2rem;
-  outline: 1px solid lime;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   &-menu {
     display: flex;
@@ -20,12 +22,9 @@
     }
   }
 
-  //User image and button on left
-
   &-user {
     display: flex;
     justify-content: space-between;
-    // outline: 1px solid lime;
     border-radius: 2rem;
 
     &-info {
@@ -59,7 +58,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        // margin-right: ;
         img {
           display: block;
           height: 3.6rem;
@@ -107,7 +105,6 @@
     }
   }
 
-  //Team below user
   &-team {
     font-size: 1.8rem;
     font-weight: 700;
@@ -116,14 +113,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      // margin-bottom: 2rem;
-      // outline: $outline;
+
       &-img {
         height: 5.5rem;
         width: 5.5rem;
         object-fit: cover;
         border-radius: 50%;
-        // margin-right: 1rem;
       }
 
       &-jr {
@@ -164,7 +159,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
-    // background-color: lightblue;
     background-color: $color-white;
     border-radius: 1rem;
     box-shadow: 0 0 2rem rgba($color-black, 0.1);
@@ -186,7 +180,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // outline: 1px solid lime;
 
     p {
       font-size: 1.8rem;
@@ -211,21 +204,157 @@
   }
 
   &-task-box {
+    flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: auto;
-    &-1 {
-      background-color: lightblue;
+    grid-auto-rows: 1fr;
+    gap: 1rem;
+    &-card {
+      padding: 3rem 2rem 2rem 2rem;
+      border-radius: 1rem;
     }
+    // First card on left
+    &-1 {
+      background-color: #f6f1eb;
+      position: relative;
+      // outline: $outline;
+      p {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
 
+      span {
+        font-size: 2rem;
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem;
+      }
+    }
+    // Second card on the left
     &-2 {
-      background-color: coral;
+      // outline: $outline;
+      background-image: linear-gradient(
+          rgba($color-off-white, 0.3),
+          rgba($color-off-white, 0.5)
+        ),
+        url(../imgs/icons/card-illustration.svg);
+      background-size: cover;
+      background-position: center;
+      position: relative;
     }
     &-3 {
-      background-color: aqua;
+      // outline: $outline;
+      background-image: linear-gradient(
+          to bottom,
+          rgba($color-off-white, 0.5),
+          rgba($color-off-white, 0.7)
+        ),
+        url(../imgs/icons/card-illustration-3.svg);
+      background-size: cover;
+      background-position: center;
+      position: relative;
     }
     &-4 {
-      background-color: lime;
+      // outline: $outline;
+
+      background-image: linear-gradient(
+          to bottom,
+          rgba($color-black, 0.1),
+          rgba($color-off-white, 0)
+        ),
+        url(../imgs/icons/card-illustration-2.svg);
+      background-size: cover;
+      background-position: bottom;
+      position: relative;
+
+      p {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.card-p {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.task-box-card-2 {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  &::before {
+    content: "";
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: #f96161;
+    border-radius: 50%;
+  }
+  p {
+    font-weight: 700;
+  }
+  &-outline {
+    height: 0.8rem;
+    width: 0.8rem;
+    outline: 1px solid rgba($color-orange, 0.7);
+  }
+}
+
+.task-box-card-3 {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  &::before {
+    content: "";
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: #34cbb3;
+    border-radius: 50%;
+  }
+  p {
+    font-weight: 700;
+  }
+  &-outline {
+    height: 0.8rem;
+    width: 0.8rem;
+    outline: 1px solid rgba($color-orange, 0.7);
+  }
+}
+
+.task-box-card-4 {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  &::before {
+    content: "";
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: $color-white;
+    border-radius: 50%;
+  }
+  p {
+    font-weight: 700;
+  }
+  &-outline {
+    height: 0.8rem;
+    width: 0.8rem;
+    outline: 1px solid rgba($color-orange, 0.7);
+    background-color: $color-black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ion-icon {
+      color: $color-white;
+      font-size: 0.7rem;
     }
   }
 }

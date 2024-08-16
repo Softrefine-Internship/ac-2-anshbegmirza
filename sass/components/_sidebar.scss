@@ -1,0 +1,69 @@
+.sidebar {
+  padding: 2rem 0 2rem 0;
+  background-color: $color-off-white;
+  &-name {
+    padding: 0 2rem 0 2rem;
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 900;
+    }
+    p {
+      font-weight: 500;
+    }
+  }
+  &-border {
+    border-bottom: 1px solid rgba($color-gray, 0.36);
+    margin-top: -0.9rem;
+  }
+
+  &-list {
+    padding: 3rem 2rem 0 2rem;
+
+    list-style: none;
+
+    &-item {
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: $color-black;
+        cursor: pointer;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // margin-bottom: 0rem;
+        padding: 0.7rem;
+        transition: all 0.3s;
+        p {
+          font-size: 1.2rem;
+        }
+        ion-icon {
+          font-size: 1.4rem;
+        }
+      }
+
+      a:active,
+      a:hover {
+        background-color: $color-white;
+      }
+
+      &-inner-opts {
+        list-style: none;
+        color: rgba($color-black, 0.8);
+        cursor: pointer;
+        padding: 0.5rem 1rem 0rem 2rem;
+        li {
+          // margin-bottom: 0.7rem;
+          padding: 0.5rem;
+          font-weight: 400;
+          &:hover {
+            background-color: $color-white;
+          }
+        }
+        li:last-child {
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}

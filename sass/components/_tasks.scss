@@ -1,6 +1,10 @@
 .tasks {
-  outline: 1px solid lime;
+  // outline: 1px solid lime;
   padding: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   h1 {
     margin-bottom: 1.3rem;
@@ -45,7 +49,9 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
     outline: 1px solid transparent;
-    min-height: 300px;
+    min-height: 30rem;
+
+    flex-grow: 1;
 
     &-general {
       padding: 2rem;
@@ -53,7 +59,7 @@
       background-color: $color-white;
       display: flex;
       flex-direction: column;
-      justify-content: space-between; // Ensures that the progress bar stays at the bottom
+      justify-content: space-between;
       height: 100%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
@@ -68,6 +74,18 @@
   }
 
   &-img-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-menu {
+      &:link,
+      &:visited {
+        img {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
     &-imgs {
       display: flex;
       align-items: center;
@@ -85,6 +103,7 @@
         border: 2px solid $color-orange-light;
         transition: all 0.3s;
         cursor: pointer;
+        font-weight: 500;
       }
 
       img {
@@ -94,10 +113,9 @@
         object-fit: cover;
         margin-left: -1.5rem;
         border: 2px solid $color-orange-light;
-      }
-
-      &-1 {
-        z-index: 4;
+        &:nth-child(2) {
+          z-index: 2;
+        }
       }
     }
   }
@@ -181,5 +199,15 @@
     border-radius: 25px;
     overflow: hidden;
     height: 0.7rem;
+  }
+}
+
+#card-2 {
+  border: 2px solid $color-yellow-light;
+  &-add {
+    color: $color-black;
+    border: 2px solid $color-black;
+    font-weight: 500;
+    background-color: $color-yellow-light;
   }
 }

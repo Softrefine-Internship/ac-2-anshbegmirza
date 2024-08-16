@@ -1,4 +1,3 @@
-.
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,23 +7,171 @@
   <title>Ziferblat</title>
 
   <link rel="stylesheet" href="css/style.css">
-
+  <!-- Favicon link -->
+  <link rel="shortcut icon" href="imgs/icons/ziferblat-logo.svg">
   <!-- Font links -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
+
+
 </head>
 
 <body class="parent-grid">
+  <!-- ************* -->
+  <!-- Navigation -->
+  <!-- ************* -->
   <nav class="nav">
-    Nav on left with icons
+    <div class="nav-logo-box">
+      <img src="imgs/icons/ziferblat-logo.svg" alt="Ziferblat logo " class="nav-logo">
+    </div>
+
+    <ul class="nav-options">
+      <!-- Home icon -->
+      <li id="selected" class="nav-options-item">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" xml:space="preserve">
+            <path fill="none" stroke="#000" stroke-width="50" stroke-miterlimit="10"
+              d="M889.2 928H613.7l-8.3-316.7H358L356.4 928H110.6V334.2L493.3 70.3l395.9 263.9z" />
+          </svg>
+        </a>
+      </li>
+      <!-- People icon -->
+      <li class="nav-options-item">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" xml:space="preserve">
+            <path fill="none" stroke="#000" stroke-width="50" stroke-miterlimit="10"
+              d="M970.4 819.8c0-149.9-85.1-278.6-206.8-334.4 20.8-31.3 30.3-67.8 28.5-103.9-2.1-41.2-18.9-81.8-50.4-113.2-67.3-67.1-176.3-66.9-243.4.4-41.7 41.9-57.4 99.8-47.2 153.8-13.4-9.7-27.6-18.1-42.7-25 15.5-23.4 22.6-50.7 21.3-77.6-1.5-30.8-14.1-61.1-37.7-84.6-50.3-50.1-131.8-50-181.9.3-45.2 45.3-49.5 115.9-13.1 166.2-86.1 43.7-145.7 137.3-145.7 245.7h275.1c-26 51.3-40.8 110-40.8 172.4h684.8z" />
+          </svg>
+        </a>
+      </li>
+      <!-- Calender icon -->
+      <li class="nav-options-item">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" xml:space="preserve">
+            <path
+              d="M808.9 858.2H190.4c-26.2 0-47.5-21.3-47.5-47.5V263.3c0-18.6 15.1-33.7 33.7-33.7h646.2c18.6 0 33.7 15.1 33.7 33.7v547.4c-.1 26.2-21.4 47.5-47.6 47.5zm-666-458.7h713.5M249.1 543.9h297.3M249.1 705.3h475.7M300.1 140.4v89.2m407.7-89.2v89.2"
+              fill="none" stroke="#000" stroke-width="50" stroke-miterlimit="10" />
+          </svg>
+        </a>
+      </li>
+      <!-- Checkmark icon -->
+      <li class="nav-options-item">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" xml:space="preserve">
+            <g fill="none" stroke="#000" stroke-width="50" stroke-miterlimit="10">
+              <path
+                d="M892.9 519.8v285.4c0 39.1-31.7 70.7-70.7 70.7H166c-39.1 0-70.7-31.7-70.7-70.7v-499c0-39.1 31.7-70.7 70.7-70.7h499" />
+              <path d="m338.9 380.9 155.2 251.5 485.3-396.8" />
+            </g>
+          </svg>
+        </a>
+      </li>
+      <!-- Clock icon -->
+      <li class="nav-options-item">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" xml:space="preserve">
+            <path fill="none" stroke="#000" stroke-width="50" stroke-miterlimit="10"
+              d="M894.6 895.5H105c-.9 0-1.7-.7-1.7-1.7V104.2c0-.9.7-1.7 1.7-1.7h789.6c.9 0 1.7.7 1.7 1.7v789.6c0 1-.8 1.7-1.7 1.7z" />
+            <path fill="none" stroke="#000" stroke-width="50" stroke-miterlimit="10" d="M477.9 342.4v208.1H732" />
+          </svg>
+        </a>
+      </li>
+      <!-- Messages icon -->
+      <li class="nav-options-item">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" xml:space="preserve">
+            <path fill="none" stroke="#000" stroke-width="50" stroke-miterlimit="10"
+              d="M489.3 253.9C314 253.9 171.8 354.7 171.8 479c0 52.6 25.7 100.9 68.3 139.2l-7.7 63-9 73.5 94.2-31.2 84.8-28.1c27.7 5.6 56.8 8.8 86.9 8.8 175.4 0 317.5-100.8 317.5-225.2S664.7 253.9 489.3 253.9z" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <div class="nav-help">
+      <ion-icon name="help"></ion-icon>
+    </div>
   </nav>
 
-  <div class="sidebar">
-    Sidebar beside Nav having multiple lists
-  </div>
+  <section class="sidebar">
+
+
+
+    <div class="sidebar-name">
+      <h1>Ziferblat</h1>
+      <p>Teamwork & time management</p>
+    </div>
+    <div class="sidebar-border">
+      <!-- For border -->
+      &nbsp;
+    </div>
+
+    <ul class="sidebar-list">
+      <li class="sidebar-list-item">
+        <a href="#">
+          <p>Team</p>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+
+      <li class="sidebar-list-item">
+        <a href="#">
+          <p>Projects</p>
+
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </a>
+        <ul class="sidebar-list-item-inner-opts">
+          <li>All projects (4)</li>
+          <li>Design System</li>
+          <li>Make unique design for customer</li>
+          <li>User flow</li>
+          <li>UX research</li>
+          <li>Add new project</li>
+        </ul>
+      </li>
+
+      <li class="sidebar-list-item">
+        <a href="#">
+          <p>Tasks</p>
+
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </a>
+        <ul class="sidebar-list-item-inner-opts">
+          <li>All tasks (3)</li>
+          <li>New (1)</li>
+          <li>In progress (1)</li>
+          <li>Done (1)</li>
+          <li>Add new task</li>
+
+        </ul>
+      </li>
+
+
+      <li class="sidebar-list-item">
+        <a href="#">
+          <p>Reminders</p>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+
+      <li class="sidebar-list-item">
+        <a href="#">
+          <p>Messenger</p>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+    </ul>
+
+
+
+
+
+  </section>
   <!-- ************* -->
   <!-- Main Task Section -->
   <!-- ************* -->
@@ -53,6 +200,9 @@
             <img src="imgs/team-member_1.jpg" alt="Card image" class="tasks-img-box-imgs-1">
             <img src="imgs/team-member_2.jpg" alt="Card image" class="tasks-img-box-imgs-1">
           </div>
+          <a href="#" class="tasks-img-box-menu">
+            <img src="imgs/icons/menu-2-dots-01.png" alt="2dots icon">
+          </a>
         </div>
         <h1>Design system</h1>
         <p>Deadline, 18 October</p>
@@ -67,12 +217,22 @@
 
       <!-- Card 2 -->
       <div class="tasks_project-cards-general tasks_project-cards-2">
-        <h1>Development</h1>
-        <p>Deadline, 22 October</p>
+        <div class="tasks-img-box margin-btm-large">
+          <div class="tasks-img-box-imgs">
+            <div id="card-2-add">+2</div>
+            <img id="card-2" src="imgs/team-member_1.jpg" alt="Card image" class="tasks-img-box-imgs-1">
+            <img id="card-2" src="imgs/team-member_2.jpg" alt="Card image" class="tasks-img-box-imgs-1">
+          </div>
+          <a href="#" class="tasks-img-box-menu">
+            <img src="imgs/icons/menu-2-dots-01.png" alt="2dots icon">
+          </a>
+        </div>
+        <h1>Make unique page for customer</h1>
+        <p>Deadline, 30 October</p>
         <div class="progress-container">
-          <span class="progress-info">50 hours / 60%</span>
+          <span class="progress-info">108 hours / 75%</span>
           <div class="progress-bar">
-            <div class="progress" style="width: 60%;"></div>
+            <div class="progress" style="width: 70%;"></div>
           </div>
         </div>
       </div>
@@ -96,7 +256,7 @@
   <!-- Updates Section -->
   <!-- ************** -->
 
-  <div class="updates">
+  <section class="updates">
     <div class="updates-menu">
       <ion-icon name="ellipsis-horizontal" class="updates-menu_icon"></ion-icon>
     </div>
@@ -155,26 +315,57 @@
 
     </div>
 
-    <div class="updates-daily-tasks-txt">
+    <div class="updates-daily-tasks-txt margin-btm-sm">
       <p>Daily Tasks (3)</p>
       <a href="#" class="updates-edit"> Edit</a>
     </div>
     <div class="updates-task-box">
-      <div class="updates-task-box-1">
-        Add new
+
+      <!-- Card-1 daily task -->
+      <div class="updates-task-box-1 updates-task-box-card ">
+        <p class="card-p">Add new</p>
+        <span>+</span>
       </div>
-      <div class="updates-task-box-2">
-        Change color palette to more bright
+
+      <!-- Card-2 daily task -->
+      <div class="updates-task-box-2 updates-task-box-card">
+        <div class="task-box-card-2">
+          <p>New</p>
+          <div class="task-box-card-2-outline"></div>
+        </div>
+        <p class="card-p">Change color palette to more bright</p>
       </div>
-      <div class="updates-task-box-3">
-        Make prototype for mobile version
+
+      <!-- Card-3 daily task -->
+      <div class="updates-task-box-3 updates-task-box-card">
+        <div class="task-box-card-3">
+          <p>In progress</p>
+          <div class="task-box-card-3-outline"></div>
+        </div>
+        <p class="card-p">
+          Make prototype for mobile version
+        </p>
       </div>
-      <div class="updates-task-box-4">
-        Make fixes in homepage
+
+      <!-- Card-4 daily task   -->
+      <div class="updates-task-box-4 updates-task-box-card">
+        <div class="task-box-card-4">
+          <p>Done</p>
+          <div class="task-box-card-4-outline">
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </div>
+        </div>
+        <p class="card-p">
+          Make fixes in homepage
+        </p>
       </div>
+
+
+
+
     </div>
 
-  </div>
+  </section>
 
   <!-- Ion icons link -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
