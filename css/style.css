@@ -1,4 +1,22 @@
 /* Our Media Query Manager which we are going to use in our project */
+/*
+0-600px phone
+600-900px tablet portrait
+900-1200 tablet landscape
+1800 + big desktop
+*/
+/*
+-phone
+-tab-port
+-tab-lan
+-big-desktop
+
+1em=16px
+
+therefore 600/16=37.5em;
+          900/16=56.25em
+
+*/
 /* Your variables used in the designing dashboard goes here */
 .margin-btm-sm {
   margin-bottom: 1rem; }
@@ -64,6 +82,12 @@ html {
   box-sizing: border-box;
   height: 100vh;
   width: 100%; }
+  @media (max-width: 44em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 35em) {
+    html {
+      font-size: 60%; } }
 
 body {
   font-family: "Manrope", sans-serif;
@@ -87,8 +111,19 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center; }
+  @media (max-width: 62.5em) {
+    .nav {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 0; } }
   .nav-logo-box {
     border-bottom: 1px solid rgba(157, 157, 157, 0.36); }
+    @media (max-width: 62.5em) {
+      .nav-logo-box {
+        border: none;
+        margin: 0; } }
   .nav-logo {
     height: 5rem;
     width: 5rem;
@@ -97,6 +132,11 @@ body {
     list-style: none;
     width: 100%;
     padding: 0; }
+    @media (max-width: 62.5em) {
+      .nav-options {
+        display: flex;
+        flex-wrap: wrap;
+        order: 3; } }
     .nav-options-item {
       padding: 1.2rem 0;
       display: flex;
@@ -111,6 +151,12 @@ body {
         .nav-options-item a svg {
           height: 2.5rem;
           width: 100%; }
+      .nav-options-item:last-child a svg {
+        height: 3rem;
+        width: 100%; }
+      @media (max-width: 62.5em) {
+        .nav-options-item {
+          flex: 1; } }
   .nav-help {
     height: 3rem;
     width: 3rem;
@@ -121,6 +167,10 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     color: #fcfcfc; }
+    @media (max-width: 62.5em) {
+      .nav-help {
+        margin-left: auto;
+        margin-right: 2rem; } }
     .nav-help ion-icon {
       font-size: 1.6rem; }
     .nav-help:hover {
@@ -178,13 +228,36 @@ body {
           background-color: #fcfcfc; }
       .sidebar-list-item-inner-opts li:last-child {
         font-weight: 900; }
+  .sidebar_checkbox {
+    display: none; }
+
+@media (max-width: 75em) {
+  .sidebar {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in, opacity 0.1s ease-in; } }
+  @media (max-width: 75em) and (max-width: 62.5em) {
+    .sidebar {
+      transform: scaleY(0);
+      transform-origin: top; } }
+
+@media (max-width: 75em) {
+    .sidebar_checkbox:checked + .sidebar {
+      visibility: visible;
+      opacity: 1;
+      z-index: 100;
+      transform: translateX(0); } }
+    @media (max-width: 75em) and (max-width: 62.5em) {
+      .sidebar_checkbox:checked + .sidebar {
+        transform: scale(1); } }
 
 .tasks {
   padding: 2rem;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  box-shadow: 0 1rem 1rem rgba(17, 17, 17, 0.1); }
   .tasks h1 {
     margin-bottom: 1.3rem; }
   .tasks_search-cont {
@@ -211,10 +284,10 @@ body {
           color: rgba(157, 157, 157, 0.7); }
   .tasks_project-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     grid-column-gap: 2rem;
     outline: 1px solid transparent;
-    min-height: 30rem;
+    grid-row-gap: 5rem;
     flex-grow: 1; }
     .tasks_project-cards-general {
       padding: 2rem;
@@ -332,7 +405,8 @@ body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  height: 100%; }
+  height: 100%;
+  box-shadow: 0 1rem 1rem rgba(17, 17, 17, 0.1); }
   .updates-menu {
     display: flex;
     justify-content: flex-end;
@@ -592,19 +666,48 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden; }
+  @media (max-width: 62.5em) {
+    .parent-grid {
+      grid-template-rows: min-content repeat(4, 1fr); } }
+  @media (max-width: 75em) {
+    .parent-grid {
+      grid-template-columns: min-content minmax(max-content, 20%) 1fr minmax(min-content, 36%);
+      overflow-x: hidden;
+      overflow-y: auto; } }
 
 .nav {
   grid-row: 1 / -1;
   grid-column: 1 / 2; }
+  @media (max-width: 62.5em) {
+    .nav {
+      grid-row: 1 / 2;
+      grid-column: 1 / -1; } }
 
 .sidebar {
   grid-row: 1 / -1;
   grid-column: 2 / 3; }
+  @media (max-width: 62.5em) {
+    .sidebar {
+      grid-row: 2 / 3;
+      grid-column: 1 / -1; } }
 
 .tasks {
   grid-row: 1 / -1;
   grid-column: 3 / 4; }
+  @media (max-width: 75em) {
+    .tasks {
+      grid-column: 2 / 4; } }
+  @media (max-width: 62.5em) {
+    .tasks {
+      grid-row: 2 / 3;
+      height: 70vh;
+      grid-column: 2 / -1; } }
 
 .updates {
   grid-row: 1 / -1;
   grid-column: 4 / 5; }
+  @media (max-width: 62.5em) {
+    .updates {
+      grid-row: 3 / -1;
+      grid-column: 2 / -1;
+      height: 80vh; } }

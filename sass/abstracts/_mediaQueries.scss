@@ -1,1 +1,53 @@
 /* Our Media Query Manager which we are going to use in our project */
+///////////////////////
+//Media queries manager
+//Desktop my pc first
+
+/*
+0-600px phone
+600-900px tablet portrait
+900-1200 tablet landscape
+1800 + big desktop
+*/
+
+/*
+-phone
+-tab-port
+-tab-lan
+-big-desktop
+
+1em=16px
+
+therefore 600/16=37.5em;
+          900/16=56.25em
+
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone-large {
+    @media (max-width: 35em) {
+      @content;
+      //500px
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (max-width: 44em) {
+      @content;
+      //700px
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media (max-width: 62.5em) {
+      @content;
+      //1000px;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media (max-width: 75em) {
+      @content;
+      //1215 px
+    }
+  }
+}
