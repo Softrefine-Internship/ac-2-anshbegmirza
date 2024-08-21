@@ -9,6 +9,10 @@
   width: 100vw;
   overflow: hidden;
 
+  @include respond(tablet) {
+    grid-template-rows: repeat(3, min-content);
+  }
+
   @include respond(laptop) {
     grid-template-rows: min-content repeat(4, 1fr);
   }
@@ -54,7 +58,7 @@
   }
   @include respond(laptop) {
     grid-row: 2 / 3;
-    height: 70vh;
+    // height: 75vh;
     grid-column: 2 / -1;
   }
 }
