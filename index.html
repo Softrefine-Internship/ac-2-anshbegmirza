@@ -25,8 +25,13 @@
   <!-- ************* -->
 
   <nav class="nav">
+
     <div class="nav-logo-box">
-      <img src="imgs/icons/ziferblat-logo.svg" alt="Ziferblat logo " class="nav-logo">
+      <label for="sidebar_checkbox">
+
+
+        <img src="imgs/icons/ziferblat-logo.svg" alt="Ziferblat logo " class="nav-logo">
+      </label>
     </div>
 
 
@@ -34,9 +39,9 @@
 
     <ul class="nav-options">
       <!-- Home icon -->
-      <li id="selected" class="nav-options-item">
+      <li tabindex="0" id="selected" class="nav-options-item">
         <a href="#">
-          <label for="sidebar_checkbox">
+          <label>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" xml:space="preserve">
               <path fill="none" stroke="#000" stroke-width="50" stroke-miterlimit="10"
                 d="M889.2 928H613.7l-8.3-316.7H358L356.4 928H110.6V334.2L493.3 70.3l395.9 263.9z" />
@@ -45,9 +50,9 @@
         </a>
       </li>
       <!-- People icon -->
-      <li class="nav-options-item">
+      <li tabindex="0" class="nav-options-item">
         <a href="#">
-          <label for="sidebar_checkbox">
+          <label>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" xml:space="preserve">
               <path fill="none" stroke="#000" stroke-width="50" stroke-miterlimit="10"
                 d="M970.4 819.8c0-149.9-85.1-278.6-206.8-334.4 20.8-31.3 30.3-67.8 28.5-103.9-2.1-41.2-18.9-81.8-50.4-113.2-67.3-67.1-176.3-66.9-243.4.4-41.7 41.9-57.4 99.8-47.2 153.8-13.4-9.7-27.6-18.1-42.7-25 15.5-23.4 22.6-50.7 21.3-77.6-1.5-30.8-14.1-61.1-37.7-84.6-50.3-50.1-131.8-50-181.9.3-45.2 45.3-49.5 115.9-13.1 166.2-86.1 43.7-145.7 137.3-145.7 245.7h275.1c-26 51.3-40.8 110-40.8 172.4h684.8z" />
@@ -58,8 +63,8 @@
 
 
       <!-- Calender icon -->
-      <li class="nav-options-item">
-        <a href="#"><label for="sidebar_checkbox">
+      <li tabindex="0" class="nav-options-item">
+        <a href="#"><label>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" xml:space="preserve">
               <path
                 d="M808.9 858.2H190.4c-26.2 0-47.5-21.3-47.5-47.5V263.3c0-18.6 15.1-33.7 33.7-33.7h646.2c18.6 0 33.7 15.1 33.7 33.7v547.4c-.1 26.2-21.4 47.5-47.6 47.5zm-666-458.7h713.5M249.1 543.9h297.3M249.1 705.3h475.7M300.1 140.4v89.2m407.7-89.2v89.2"
@@ -70,9 +75,9 @@
         </a>
       </li>
       <!-- Checkmark icon -->
-      <li class="nav-options-item">
+      <li tabindex="0" class="nav-options-item">
         <a href="#">
-          <label for="sidebar_checkbox">
+          <label>
 
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" xml:space="preserve">
@@ -86,9 +91,9 @@
         </a>
       </li>
       <!-- Clock icon -->
-      <li class="nav-options-item">
+      <li tabindex="0" class="nav-options-item">
         <a href="#">
-          <label for="sidebar_checkbox">
+          <label>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" xml:space="preserve">
               <path fill="none" stroke="#000" stroke-width="50" stroke-miterlimit="10"
                 d="M894.6 895.5H105c-.9 0-1.7-.7-1.7-1.7V104.2c0-.9.7-1.7 1.7-1.7h789.6c.9 0 1.7.7 1.7 1.7v789.6c0 1-.8 1.7-1.7 1.7z" />
@@ -100,9 +105,9 @@
       </li>
 
       <!-- Messages icon -->
-      <li class="nav-options-item">
+      <li tabindex="0" class="nav-options-item">
         <a href="#">
-          <label for="sidebar_checkbox">
+          <label>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" xml:space="preserve">
               <path fill="none" stroke="#000" stroke-width="50" stroke-miterlimit="10"
                 d="M489.3 253.9C314 253.9 171.8 354.7 171.8 479c0 52.6 25.7 100.9 68.3 139.2l-7.7 63-9 73.5 94.2-31.2 84.8-28.1c27.7 5.6 56.8 8.8 86.9 8.8 175.4 0 317.5-100.8 317.5-225.2S664.7 253.9 489.3 253.9z" />
@@ -396,15 +401,18 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-
+  <!-- 
   <script>
+
     document.querySelectorAll('.nav-options-item').forEach(item => {
       item.addEventListener('click', function () {
+        // Remove hover effect by adding 'no-hover' class to the clicked item
         this.classList.add('no-hover');
       });
     });
 
-  </script>
+
+  </script> -->
 
 
 </body>

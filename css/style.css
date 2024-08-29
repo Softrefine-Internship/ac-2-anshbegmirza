@@ -132,6 +132,7 @@ body {
   .nav-logo {
     height: 5rem;
     width: 5rem;
+    cursor: pointer;
     margin: 0 1rem; }
   .nav-options {
     list-style: none;
@@ -183,9 +184,6 @@ body {
       color: #111111; }
 
 #selected {
-  background-color: #f2ece2; }
-
-.nav-options-item.no-hover:hover {
   background-color: #f2ece2; }
 
 .sidebar {

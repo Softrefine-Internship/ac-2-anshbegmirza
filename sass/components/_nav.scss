@@ -23,7 +23,7 @@
   &-logo {
     height: 5rem;
     width: 5rem;
-
+    cursor: pointer;
     margin: 0 1rem;
   }
 
@@ -48,7 +48,6 @@
       &:hover {
         background-color: $color-off-white;
       }
-
       a {
         text-decoration: none;
 
@@ -101,6 +100,6 @@
   background-color: $color-off-white;
 }
 
-.nav-options-item.no-hover:hover {
-  background-color: $color-off-white;
-}
+// .nav-options-item.no-hover:hover {
+//   background-color: initial;
+// }
