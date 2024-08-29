@@ -3,6 +3,7 @@
   background-color: $color-off-white;
   &-name {
     padding: 0 2rem 0 2rem;
+    cursor: pointer;
     h1 {
       font-size: 1.8rem;
       font-weight: 900;
@@ -34,7 +35,7 @@
         // margin-bottom: 0rem;
         padding: 0.7rem;
         transition: all 0.3s;
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         p {
           font-size: 1.2rem;
         }
@@ -57,7 +58,7 @@
           // margin-bottom: 0.7rem;
           padding: 0.5rem;
           font-weight: 400;
-          border-radius: 0.5rem;
+          border-radius: 0.2rem;
 
           &:hover {
             background-color: $color-white;

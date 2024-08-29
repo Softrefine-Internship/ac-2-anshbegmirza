@@ -64,7 +64,8 @@ therefore 600/16=37.5em;
   border: 1px dotted #f0894d;
   background-color: #fcfcfc;
   cursor: pointer;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  text-wrap: nowrap; }
   .btn-setReminder:hover {
     background-color: #f2ece2; }
 
@@ -122,7 +123,8 @@ body {
       flex-wrap: wrap;
       padding: 0; } }
   .nav-logo-box {
-    border-bottom: 1px solid rgba(157, 157, 157, 0.36); }
+    border-bottom: 1px solid rgba(157, 157, 157, 0.36);
+    cursor: pointer; }
     @media (max-width: 62.5em) {
       .nav-logo-box {
         border: none;
@@ -187,7 +189,8 @@ body {
   padding: 2rem 0 2rem 0;
   background-color: #f2ece2; }
   .sidebar-name {
-    padding: 0 2rem 0 2rem; }
+    padding: 0 2rem 0 2rem;
+    cursor: pointer; }
     .sidebar-name h1 {
       font-size: 1.8rem;
       font-weight: 900; }
@@ -210,7 +213,7 @@ body {
       justify-content: space-between;
       padding: 0.7rem;
       transition: all 0.3s;
-      border-radius: 1rem; }
+      border-radius: 0.5rem; }
       .sidebar-list-item a:link p,
       .sidebar-list-item a:visited p {
         font-size: 1.2rem; }
@@ -228,7 +231,7 @@ body {
       .sidebar-list-item-inner-opts li {
         padding: 0.5rem;
         font-weight: 400;
-        border-radius: 0.5rem; }
+        border-radius: 0.2rem; }
         .sidebar-list-item-inner-opts li:hover {
           background-color: #fcfcfc; }
       .sidebar-list-item-inner-opts li:last-child {
@@ -501,7 +504,8 @@ body {
         height: 5.5rem;
         width: 5.5rem;
         object-fit: cover;
-        border-radius: 50%; }
+        border-radius: 50%;
+        cursor: pointer; }
       .updates-teamMembers-jr {
         height: 5rem;
         width: 5rem;
