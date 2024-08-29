@@ -395,13 +395,19 @@
   <!-- Ion icons link -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-<script>
-  mobileBtnNav.addEventListener("click", function () {
-    header.classList.toggle("nav-open");
-    mobileBtnNav.blur();
-  });
 
-</script>
+
+  <script>
+    document.querySelectorAll('.nav-options-item').forEach(item => {
+      item.addEventListener('click', function () {
+        this.classList.add('no-hover');
+      });
+    });
+
+  </script>
+
+
+</body>
+
 
 </html>

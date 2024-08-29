@@ -151,9 +151,6 @@ body {
       transition: all 0.3s; }
       .nav-options-item:hover {
         background-color: #f2ece2; }
-      @media (max-width: 62.5em) {
-        .nav-options-item:hover {
-          background-color: initial; } }
       .nav-options-item a {
         text-decoration: none; }
         .nav-options-item a svg {
@@ -186,6 +183,9 @@ body {
       color: #111111; }
 
 #selected {
+  background-color: #f2ece2; }
+
+.nav-options-item.no-hover:hover {
   background-color: #f2ece2; }
 
 .sidebar {
@@ -513,8 +513,8 @@ body {
         border-radius: 50%;
         cursor: pointer; }
       .updates-teamMembers-jr {
-        height: 5rem;
-        width: 5rem;
+        height: 6rem;
+        width: 6rem;
         background-color: #f6f2ec;
         border-radius: 50%;
         display: grid;

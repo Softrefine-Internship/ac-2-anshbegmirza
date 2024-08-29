@@ -49,12 +49,6 @@
         background-color: $color-off-white;
       }
 
-      @include respond(laptop) {
-        &:hover {
-          background-color: initial;
-        }
-      }
-
       a {
         text-decoration: none;
 
@@ -104,5 +98,9 @@
 }
 
 #selected {
+  background-color: $color-off-white;
+}
+
+.nav-options-item.no-hover:hover {
   background-color: $color-off-white;
 }
